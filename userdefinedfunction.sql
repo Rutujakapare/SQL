@@ -4,7 +4,7 @@ Create function F1()
 returns varchar(50)
 AS
 begin
-    return "Welcome to github"
+    return 'Welcome to github'
 end
 
 ---single parameter
@@ -12,7 +12,7 @@ create function f2(@a as int)
 returns int
 AS
 begin
-    return select * from student where student_id = @a
+    return ('this is my lucky number' + @a)
 end
 
 
@@ -21,7 +21,7 @@ create function f3(@a as int, @b as varchar,@c as varchar)
 returns varchar(50)
 AS
 begin
-    return select * from student where student_id = @a and student_name = @b and subject = @c
+    return ('this is my lucky number'+' '+cast(@a as varchar(50))+' '+'my name is' + @b + 'my subject is' + @c)
 end
 
 
