@@ -16,7 +16,7 @@ create table std_dept(
 -- unique key
 create table std_subject(
     std_id int not null,
-    subject varchar(50) unique,
+    subject varchar(50) unique,   -- unique key is created at the time create table.
     marks int,
 
     )
@@ -25,13 +25,13 @@ create table std_subject(
 create table std_marks(
     std_id int not null,
     subject varchar(50),
-    marks int check(marks >= 0 and marks <= 100)
+    marks int check(marks >= 0 and marks <= 100)    --- check constraint is created at the time create table.
     )
 
 -- not null constraint
 create table std_address(
     std_id int not null,
-    subject varchar(50) not null,
+    subject varchar(50) not null,  --- not null constraint is created at the time create table.
     marks int not null
     )
 
@@ -39,5 +39,5 @@ create table std_address(
 create table std_email(
     std_id int not null,
    name varchar(50)not null,
-   city varchar(50) not null default 'Pune'
+   city varchar(50) not null default 'Pune'   --- default constraint is created at the time create table.
     )
